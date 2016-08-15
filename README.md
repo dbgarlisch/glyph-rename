@@ -1,8 +1,19 @@
 # glyph-rename
 
-Renames all grid and database entites in a Pointwise model.
+Renames all grid and database entites in a Pointwise model using the standard Pointwise `basename-n` naming convention.
 
+Often after performing many operations on a Pointwise model, the entity names become very long and mangled (e.g. `blk-1-split-2-split-1-split-1`). This script will standardize all the names.
+
+The current implementation calls:
 ```Tcl
+renameEnts Block     blk
+renameEnts Domain    dom
+renameEnts Connector con
+renameEnts Model     model
+renameEnts Quilt     quilt
+renameEnts Surface   surface
+renameEnts Curve     curve
+renameEnts Shell     shell
 ```
 
 ## Disclaimer
